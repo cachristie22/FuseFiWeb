@@ -1,0 +1,114 @@
+.plans-section {
+    background: var(--white);
+}
+
+.plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-6);
+}
+
+.plan {
+    padding: var(--space-8);
+    border: 1.5px solid var(--gray-300);
+    border-radius: var(--radius-lg);
+    background: var(--white);
+    transition: all var(--transition-normal);
+}
+
+.plan:hover {
+    border-color: var(--gray-500);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.plan.featured {
+    border-color: var(--ink);
+    position: relative;
+}
+
+.plan.featured::after {
+    content: 'Most popular';
+    position: absolute;
+    top: -12px;
+    left: 24px;
+    background: var(--ink);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.plan-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: var(--space-1);
+}
+
+.plan-desc {
+    font-size: 14px;
+    color: var(--gray-500);
+    margin-bottom: var(--space-4);
+}
+
+.plan-price {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-1);
+    margin-bottom: var(--space-6);
+}
+
+.plan-price .amount {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--ink);
+}
+
+.plan-price .period {
+    color: var(--gray-500);
+    font-size: 14px;
+}
+
+.plan-features {
+    margin-bottom: var(--space-6);
+}
+
+.plan-features li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-2) 0;
+    font-size: 15px;
+    color: var(--gray-700);
+}
+
+.plan-features li::before {
+    content: '✓';
+    color: var(--orange);
+    font-weight: 700;
+}
+
+.plan .btn {
+    width: 100%;
+}
+
+.plans-note {
+    text-align: center;
+    margin-top: var(--space-8);
+    color: var(--gray-500);
+    font-size: 14px;
+}
+
+@media (max-width: 640px) {
+    .plan {
+        padding: var(--space-6);
+    }
+
+    .plan-price .amount {
+        font-size: 36px;
+    }
+}
