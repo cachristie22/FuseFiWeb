@@ -1,0 +1,87 @@
+.coming-soon-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.coming-soon-content {
+    text-align: center;
+    max-width: 500px;
+}
+
+.coming-soon-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.coming-soon-content h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.tagline {
+    color: #94a3b8;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.coming-soon-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.description {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+}
+
+.notify-section {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+}
+
+.notify-section p {
+    color: #94a3b8;
+    margin-bottom: 0.75rem;
+}
+
+.email-link {
+    color: #ff6b35;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.email-link:hover {
+    color: #ff8c5a;
+}
+
+@media (max-width: 480px) {
+    .coming-soon-content h1 {
+        font-size: 2.25rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+}

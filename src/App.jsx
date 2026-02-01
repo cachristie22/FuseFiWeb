@@ -11,6 +11,10 @@ import Footer from './components/Footer';
 import PaymentSuccess from './components/PaymentSuccess';
 import Profile from './components/Profile';
 import ResetPassword from './components/ResetPassword';
+import ComingSoon from './components/ComingSoon';
+
+// Check for stealth mode (coming soon page)
+const isStealthMode = import.meta.env.VITE_STEALTH_MODE === 'true';
 
 // Landing page with all sections
 function LandingPage() {
@@ -27,6 +31,11 @@ function LandingPage() {
 }
 
 function App() {
+  // In stealth mode, only show coming soon page
+  if (isStealthMode) {
+    return <ComingSoon />;
+  }
+
   return (
     <>
       <Navbar />
@@ -45,3 +54,4 @@ function App() {
 }
 
 export default App;
+
