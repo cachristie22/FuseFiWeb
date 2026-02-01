@@ -1,0 +1,134 @@
+.confirmation-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4);
+}
+
+.confirmation-modal {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: var(--space-8);
+    text-align: center;
+    animation: popIn 0.3s ease-out;
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.confirmation-icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, var(--success), #22c55e);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-5);
+    font-size: 36px;
+    color: var(--white);
+}
+
+.confirmation-modal h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 var(--space-2);
+}
+
+.confirmation-subtitle {
+    color: var(--gray-500);
+    margin-bottom: var(--space-6);
+}
+
+.confirmation-order-id {
+    display: inline-flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    background: var(--cream);
+    padding: var(--space-4) var(--space-6);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-6);
+}
+
+.confirmation-order-id span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gray-500);
+}
+
+.confirmation-order-id strong {
+    font-size: 18px;
+    font-family: monospace;
+}
+
+.confirmation-details {
+    display: grid;
+    gap: var(--space-5);
+    text-align: left;
+    padding: var(--space-5) 0;
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.confirmation-section h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--gray-500);
+    margin: 0 0 var(--space-2);
+}
+
+.confirmation-section p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.confirmation-total {
+    font-size: 24px !important;
+    font-weight: 700;
+}
+
+.confirmation-next {
+    text-align: left;
+    padding: var(--space-5) 0;
+}
+
+.confirmation-next h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 var(--space-3);
+}
+
+.confirmation-next ol {
+    margin: 0;
+    padding-left: var(--space-5);
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.8;
+}
+
+.confirmation-btn {
+    width: 100%;
+    margin-top: var(--space-5);
+    padding: var(--space-4);
+    font-size: 16px;
+}
